@@ -1,0 +1,1257 @@
+:root {
+    --blue-grey: #637696;
+    --squash: #e6b413;
+    --green-blue: #00b178;
+    --denim-blue-30: rgba(60, 90, 154, 0.3);
+    --scarlet: #d0021b;
+    --dark-lime-green: #86c306;
+    --cerulean: #009cde;
+    --nice-blue-7: rgba(23, 115, 166, 0.07);
+    --dark-grey-blue: #3a4e6f;
+    --cerulean-30: rgba(0, 156, 222, 0.3);
+    --cerulean-005:rgba(0, 156, 222, 0.05);
+    --golden-yellow: #f8c41c;
+  }
+  @import url(//db.onlinewebfonts.com/c/cbbfee9126dc0abc730b9875dc28832f?family=Akkurat+Pro);
+  /* @font-face {
+    font-family: CircularStd;
+    src: url(../fonts/Circular-Std-Font/Circular\ Std\ Black.ttf);
+  } */
+  @font-face {
+    font-family: AkkuratPro;
+    src: local(AkkuratPro-Regular),
+      url(../fonts/AkkuratPro/AkkuratPro-Regular.otf);
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+  }
+  @font-face {
+    font-family: AkkuratPro;
+    src: local(AkkuratPro-Bold),
+      url(../fonts/AkkuratPro/AkkuratPro-Bold.otf);
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+  }
+  @font-face {
+    font-family: CircularStd;
+    src: local(CircularStd-Medium),
+      url(../fonts/Circular-Std-Font/Circular\ Std\ Medium.ttf);
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+  }
+  @font-face {
+    font-family: CircularStd;
+    src: local(CircularStd-Bold),
+      url(../fonts/Circular-Std-Font/Circular\ Std\ Bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+  }
+  .Text-Style {
+    font-family: CircularStd;
+    font-size: 48px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #000000;
+  }
+  .Text-Style-2 {
+    font-family: CircularStd;
+    font-size: 24px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.17;
+    letter-spacing: normal;
+    text-align: center;
+    color: var(--blue-grey);
+  }
+  .Text-Style-4 {
+    font-family: AkkuratPro;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.63;
+    letter-spacing: normal;
+    color: var(--cerulean);
+  }
+  .Text-Style-3 {
+    font-family: AkkuratPro;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.57;
+    letter-spacing: normal;
+    color: var(--squash);
+  }
+/* --------------------------- CSS RESETTER ----------------------------------- */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+    overflow-x: hidden;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+input,label{
+    cursor: text;
+}
+select{
+    cursor: pointer;
+}
+button{
+    cursor: pointer;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/* --------------------------- CSS RESETTER ----------------------------------- */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main_wrapper{
+  width: 1680px;
+  background-color: #ffffff;
+  margin: 0 auto;
+  /* display: flex;
+  flex-direction: column;
+   */
+}
+header{
+    border: 1px solid rgb(255, 255, 255);
+ width: 1680px;
+    /* position: relative; */
+    height: 350px;
+    background-image: linear-gradient(to bottom, #f6fcff, #ffffff 96%);
+    z-index: 1;
+    /* margin: 0 0 1004px; */
+}
+
+.head_wrapper{
+    
+    padding: 30px 248px 42px 246px;
+    display: flex;
+    position: fixed;
+    z-index: 999;
+    /* border: 1px solid black; */
+    background-color: #f6fcff;
+
+}
+.head_wrapper .company_logo{
+    margin-right: 81px;
+}
+.head_wrapper .navbar{
+    margin-top: 10px;
+    margin-right: 197px;
+    height: 20px;   
+    /* border: 1px solid black;  */
+}
+.head_wrapper .navbar ul li{
+    display: inline-block;
+}
+.head_wrapper .navbar ul li a{
+  text-decoration: none;
+  width: 83px;
+  height: 20px;
+  margin: 0 40px 0 0;
+  font-family: "AkkuratPro";
+  font-size: 12px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.67;
+  letter-spacing: 1px;
+  color: var(--dark-grey-blue);
+}
+#about_us_link{
+    margin-right: 0;
+}
+.head_wrapper .login_signup_container{
+    display: flex;
+    height: 50px;
+    
+    /* border: 1px solid black; */
+}
+.head_wrapper .login_signup_container select{
+    margin: 0 30px 0 0;
+    background-color: rgba(246, 252, 255, 0);
+    /* #f6fcff */
+    border: none;
+    outline: none;
+    cursor: pointer;
+   
+}
+.head_wrapper .login_signup_container .change_language_container{
+    /* border: 1px solid black; */
+    display: flex;
+    width: 80px;
+    margin: 4px 30px 0px 0px;
+    height: 40px;
+}
+
+.head_wrapper .login_signup_container .change_language_container img{
+    height: 24px;
+    width: 24px;
+    border-radius: 20px;
+    margin: 7px 5px 5px 0px;
+}
+.head_wrapper .login_signup_container .login_container > button{
+  width: 110px;
+  height: 46px;
+  margin: 0 20px 0 0;
+  padding: 11px 35px 15px;
+  /* opacity: 0.1; */
+  border-radius: 23px;
+  background-color: #f6fcff;
+  border: solid 2px var(--cerulean-30);
+  font-family: AkkuratPro;
+  font-size: 12px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.67;
+  letter-spacing: 1px;
+  color: var(--cerulean-30);
+  cursor: pointer;
+}
+.head_wrapper .login_signup_container .login_container > button:hover{
+    background-color: #ffffff71;
+}
+.head_wrapper .login_signup_container .signup_container > button{
+  width: 112px;
+  height: 48px;
+  margin: 0 0 0 20px;
+  padding: 11px 28px 15px;
+  border-radius: 23px;
+  /* border: 2px solid rgba(0, 156, 222, 0.1); */
+  border: none;
+  background-color: rgba(0, 156, 222, 0.1);
+  cursor: pointer;
+
+}
+.head_wrapper .login_signup_container .signup_container > button > span{
+  width: 54px;
+  height: 20px;
+  font-family: AkkuratPro;
+  font-size: 12px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.67;
+  letter-spacing: 1px;
+  color: var(--cerulean);
+
+}
+.head_wrapper .login_signup_container .signup_container > button:hover{
+    background-color: rgba(0, 156, 222, 0.2);
+}
+.create_account{
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid black; */
+    margin-top: 50px;
+    margin-top: 191px;
+}
+.create_account > .create_account_text{
+    width: 345px;
+  height: 64px;
+  font-family: CircularStd;
+  font-size: 48px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: #000000;
+  /* border: 1px solid black; */
+}
+.oval_rectangle{
+    display: flex;
+    margin-top: 45px;
+    /* border: 1px solid black; */
+    height: 66px;
+    justify-content: center;
+}
+.oval_rectangle .oval{
+    width: 64px;
+    height: 64px;
+    margin: 0 25px 13px 27px;
+    padding: 18px 25px 18px 26px;
+    background-color: var(--cerulean-005);
+    border-radius: 50%;
+}
+.oval_rectangle .oval:hover{
+    background-color: rgba(131, 131, 131, 0.274);
+    cursor: pointer;
+}
+.oval_rectangle .oval > span{
+    width: 13px;
+  height: 28px;
+  font-family: CircularStd;
+  font-size: 24px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.17;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--blue-grey);
+}
+.oval_rectangle .oval.active{
+    margin: 0 21px 13px 22px;
+    padding: 18px 27px;
+    box-shadow: 0 2px 4px 0 var(--cerulean-30);
+    background-color: var(--cerulean);
+    color: white;
+}
+.oval_rectangle .oval.active:hover{
+    background-color: rgb(0, 131, 187);
+    cursor: pointer;
+}
+.oval_rectangle .oval.active > span{
+    width: 10px;
+  height: 28px;
+  font-family: CircularStd;
+  font-size: 24px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.17;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+.oval_rectangle .hl{
+    width: 60px;
+    height: 1px;
+    margin: 32px 9px 70px 15px;
+    opacity: 0.2;
+    background-color: var(--blue-grey);
+}
+.process_step_container{
+    display: flex;
+    /* justify-content: center; */
+    margin-top: 10px;
+}
+.process_step_container .account_setup_text{
+    width: 107px;
+  height: 26px;
+  margin: 13px 0 0 590px;
+  font-family: CircularStd;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.63;
+  letter-spacing: normal;
+  text-align: center;
+  color: #6376968e;
+}
+.process_step_container .personal_details_text{
+    width: 116px;
+    height: 26px;
+    margin: 13px 106px 0px 86px;
+    color: #6376968e;
+    font-family: CircularStd;
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.63;
+    letter-spacing: normal;
+    text-align: center;
+   
+}
+.process_step_container .verify_id_text{
+    width: 65px;
+  height: 26px;
+  margin: 13px 0 0;
+  color: #6376968e;
+  font-family: CircularStd;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.63;
+  letter-spacing: normal;
+  text-align: center;
+}
+.process_step_container h2.active{
+    color: black;
+}
+.notification_container{
+    display: flex;
+    justify-content: center;
+}
+.notification_container .rectangle_1{
+    display: flex;
+    align-items: center;
+    width: 553px;
+    height: 72px;
+    margin: 53px 0 30px;
+    padding: 0px 91px 0px 15px;
+    border-radius: 7px;
+    background-color: rgba(248, 196, 28, 0.1);
+}
+.rectangle_1 .clock_icon{
+  width: 18px;
+  height: 18px;
+  /* margin: 15px 15px 11px 0; */
+  object-fit: contain;
+  cursor: pointer;
+}
+.rectangle_1 .notification_text{
+    width: 414px;
+    height: 44px;
+    margin: 0 0 0 15px;
+    font-family: AkkuratPro;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.57;
+    letter-spacing: normal;
+    color: var(--squash);
+}
+.form_container{
+    display: flex;
+    justify-content: center;
+}
+.form_container .center_container{
+    display: flex;
+    flex-direction: column;
+    width: 553px;
+    
+}
+.form_labels{
+    /* width: 140px; */
+    /* border: 1px solid blue; */
+    height: 26px;
+    margin: 0px 0px 5px 0;
+    font-family: AkkuratPro;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.63;
+    letter-spacing: normal;
+    color: rgba(99, 118, 150, 0.5);
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0px 50px var(--cerulean-005) inset !important;
+}
+
+.form_inputs{
+    width: 553px;
+    height: 50px;
+    margin: 5px 0 0;
+    padding: 10px 200px 12px 20px;
+    /* opacity: 0.05; */
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: var(--cerulean-005);
+
+    font-family: AkkuratPro;
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.78;
+    letter-spacing: normal;
+    color: var(--blue-grey);
+}
+.form_inputs:focus, .form_inputs:hover{
+    /* margin: 5px 0 0; */
+    border-radius: 10px;
+    box-shadow: 0 0 15px 0 rgba(0, 156, 222, 0.2);
+    border: solid 1px var(--cerulean-30);
+    background-color: #ffffff;
+}
+.required{
+    color: rgba(255, 0, 0, 0.466);
+}
+.terms{
+    display: flex;
+    margin-top: 4px;
+    align-items: flex-start;
+}
+.main {
+    margin-top: 5px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+  
+/* Hide the default checkbox */
+input[type=checkbox] {
+    visibility: hidden;
+}
+  
+/* Creating a custom checkbox
+based on demand */
+.geekmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border-radius: 5px;
+    background-color:rgba(0, 156, 222, 0.2);
+}
+  
+/* Specify the background color to be
+shown when hovering over checkbox */
+.main:hover input ~ .geekmark {
+    background-color: rgba(0, 156, 222, 0.5);
+}
+  
+/* Specify the background color to be
+shown when checkbox is checked */
+.main input:checked ~ .geekmark {
+    background-color: rgba(0, 156, 222, 0.5);
+}
+  
+/* Checkmark to be shown in checkbox */
+/* It is not be shown when not checked */
+.geekmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+/* Display checkmark when checked */
+.main input:checked ~ .geekmark:after {
+    display: block;
+}
+  
+/* Styling the checkmark using webkit */
+/* Rotated the rectangle by 45 degree and 
+showing only two border to make it look
+like a tickmark */
+.main .geekmark:after {
+    left: 5px;
+    bottom: 5px;
+    width: 5px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 4px 4px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.terms .terms_text {
+    width: 489px;
+    height: 78px;
+    margin: 0 0 0 15px;
+    font-family: AkkuratPro;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.63;
+    letter-spacing: normal;
+    color: var(--blue-grey);
+}
+.terms .terms_text .terms_link a{
+    color: var(--cerulean);
+    text-decoration: none;
+}
+.recaptha{
+    width: 302px;
+    height: 76px;
+    margin: 20px 251px 0px 0;
+    background-color: #d8d8d8;
+}
+.submit_btn{
+    width: 553px;
+    height: 64px;
+    margin: 0px 0 16px;
+    /* padding: 18px 232px 22px 234px; */
+    border-radius: 32px;
+    box-shadow: 0 2px 4px 0 rgba(103, 194, 6, 0.3);
+    background-color: var(--dark-lime-green);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.submit_btn:hover{
+    background-color: rgba(88, 170, 0, 0.904);
+}
+.submit_btn .btn_text{
+    width: 87px;
+    height: 24px;
+    font-family: AkkuratPro;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+.submit_btn.section_1{
+    margin-top: 24px;
+}
+.or_text{
+    width: 17px;
+    height: 26px;
+    margin: 0px 267px 20px 269px;
+    opacity: 0.5;
+    font-family: AkkuratPro;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.63;
+    letter-spacing: normal;
+    color: var(--blue-grey);
+}
+.fb_btn{
+    width: 553px;
+    height: 64px;
+    margin: 0px 0 0;
+    padding: 17px 159px;
+    border-radius: 32px;
+    box-shadow: 0 2px 4px 0 var(--denim-blue-30);
+    background-color: #3c5a9a;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.fb_btn:hover{
+    background-color: rgba(0, 35, 100, 0.836);
+}
+
+.fb_btn_text{
+   
+    width: 195px;
+    height: 24px;
+    margin: 1px 0 5px 10px;
+    font-family: AkkuratPro;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    color: #ffffff;
+  
+}
+.triangle-left {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-top:  332px solid transparent;
+    
+    border-left: 1599px solid rgba(0, 156, 222, 0.09);
+    z-index: 1;
+}
+
+.inner-triangle {
+    position: relative;
+    bottom: 328px;
+    left: -1600px;
+    width: 0px;
+    height: 0px;
+    border-top: 504px solid transparent;
+    border-left: 2461px solid white;
+    z-index: 1;
+}
+.path_2{
+    position: absolute;
+    z-index: 2;
+    width: 1680px;
+    /* height: 686px; */
+    height: 750px;
+    margin: -278px 0 0;
+    padding: 225px 0 0;
+    border-top: 300px solid transparent;
+    border-left: 1680px solid #f5fcff;
+    background-color: linear-gradient(to right, #f5fcff, #ffffff);
+}
+.footer_wrapper{
+    position: absolute;
+    margin:  0 auto;
+    z-index: 99;
+    width: 1680px;
+    padding-left: 270px;
+    display: flex;
+    flex-direction: column;
+    /* padding: 30px 248px 42px 246px; */
+    /* height: 100px; */
+    /* background-color: black; */
+}
+.footer_wrapper .row_1{
+    display: flex;
+}
+.footer_wrapper .row_1 .col{
+    display: flex;
+    flex-direction: column;
+}
+.footer_wrapper .row_1 .col_1{
+    /* border: 1px solid black; */
+    margin: 0px 287px 127px 0;
+}
+.footer_wrapper .row_1 .col_1 .raiting{
+    margin: 30px 0 11px 0;
+    cursor: pointer;
+}
+.footer_wrapper .row_1 .col_1 p{
+    width: 300px;
+    height: 22px;
+    opacity: 0.5;
+    font-family: AkkuratPro;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.57;
+    letter-spacing: normal;
+    color: var(--blue-grey);
+}
+.footer_wrapper .row_1 .col .heading{
+    width: 74px;
+    height: 24px;
+    margin: 0 122px 16px 0;
+    font-family: AkkuratPro;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: 1px;
+    color: #000000;
+}
+.footer_wrapper .row_1 .col .links_text{
+    font-family: AkkuratPro;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.13;
+    letter-spacing: normal;
+    color: var(--blue-grey);
+}
+.footer_wrapper .row_1 .col ul{
+    list-style-type: none;
+}
+.footer_wrapper .row_1 .col ul li a{
+    text-decoration: none;
+}
+.footer_wrapper .row_1 .col_2{
+    margin-right: 122px;
+    width: 74px;
+}
+.footer_wrapper .row_1 .col_3{
+    width: 88px;
+    margin-right: 107px;
+}
+.footer_wrapper .row_1 .col_4{
+    width: 105px;
+}
+.footer_wrapper .row_1 .col_4 .links_text{
+    margin-left: 15px;
+}
+
+.footer_wrapper .row_2{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 240px;
+}
+.footer_wrapper .row_2 .links a{
+    width: 90px;
+    height: 22px;
+    margin: 0px 30px 58px 0;
+    font-family: AkkuratPro;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 1.57;
+    letter-spacing: normal;
+    color: var(--blue-grey);
+}
+.footer_wrapper .row_2 .language_select label{
+      width: 67px;
+  height: 22px;
+  margin: 122px 10px 58px 436px;
+  font-family: AkkuratPro;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.57;
+  letter-spacing: normal;
+  color: var(--blue-grey);
+}
+.footer_wrapper .row_2 .language_select select{
+ 
+  /* margin: 122px 5px 58px 10px; */
+  font-family: AkkuratPro;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  border: none;
+  outline: none;
+  background-color: rgba(246, 252, 255, 0);
+  line-height: 1.57;
+  letter-spacing: normal;
+  color: #000000;
+  cursor: pointer;
+}
+.footer_wrapper .row_3 p{
+    width: 1090px;
+    height: 44px;
+    margin: 58px 18px 0 0;
+    opacity: 0.5;
+    font-family: AkkuratPro;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.57;
+    letter-spacing: normal;
+    color: var(--blue-grey);
+}
+
+.error_message{
+    color: #d0021b;
+    opacity: 0.5;
+    font-size: 16px;
+    margin-top: 5px;
+    font-family: sans-serif;
+    margin: 0 0 5px 0;
+    /* display: none; */
+    visibility: hidden;
+}
+
+
+/* -------------------------------------------------------------------------------------- */
+
+.inner_form_container_otp{
+ 
+    /* height: 50px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.inner_form_container_otp .otp_code_container{
+    width: 325px;
+    /* height: 200px; */
+    /* background-color: black; */
+}
+.inner_form_container_otp .otp_code_container > p{
+    width: 86px;
+    height: 26px;
+    margin: 0 79px 0px 0;
+    opacity: 0.5;
+    font-family: AkkuratPro;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.63;
+    letter-spacing: normal;
+    color: var(--blue-grey);
+}
+.inner_form_container_otp .otp_code_container input{
+    width: 63px;
+    height: 100px;
+    margin: 15px 20px 40px 0;
+    padding: 31px 21px 37px;
+    border: none;
+    outline:none;
+    border-radius: 10px;
+    background-color: var(--cerulean-005);
+    /* border: 1px solid black; */
+    font-family: AkkuratPro;
+    font-size: 36px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.89;
+    letter-spacing: normal;
+    color: var(--blue-grey);
+}
+
+
+#lastInput{
+    margin: 15px 0px 40px 0;
+}
+.country{
+    margin-top: 43px;
+}
+.form_row2{
+    display: flex;
+    justify-content: space-between;
+}
+.form_row3{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.form_row3 .form_col2{
+    display: flex;
+    flex-direction: column;
+    width: 170px;
+}
+.form_row3 .form_col3{
+    display: flex;
+    flex-direction: column;
+    width: 364px;
+}
+.form_row2 .form_col1{
+    display: flex;
+    flex-direction: column;
+}
+.form_row2 .form_col1 input{
+    width: 267px;
+    height: 50px;
+    margin: 5px 0 0;
+    padding: 6px 148px 12px 20px;
+    /* opacity: 0.05; */
+    border-radius: 10px;
+    background-color: var(--cerulean-005);
+}
+.form_row2 .form_col1 input:hover,.form_row2 .form_col1 input:focus {
+    background-color: #ffffff;
+}
+.phone_number_section{
+    display: flex;
+    margin-bottom: 40px;
+}
+.phone_number_section .country_code{
+    display: flex;
+    flex-direction: column;
+    margin-right: 19px;
+}
+.phone_number_section .country_code select{
+    width: 170px;
+    height: 50px;
+    margin: 5px 0 0 0;
+    padding: 6px 20px 11px;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    background-color: var(--cerulean-005);
+}
+.phone_number_section .phone_number{
+    display: flex;
+    flex-direction: column;
+}
+.phone_number_section .phone_number input{
+    width: 364px;
+    height: 50px;
+    margin: 5px 0 0;
+    padding: 6px 210px 12px 20px;
+    
+    border-radius: 10px;
+    /* background-color: var(--cerulean-005); */
+}
+#cncode{
+    width: 170px;
+    height: 50px;
+    margin: 5px 0 0;
+    padding: 13px 17px 12px 15px;
+    /* opacity: 0.05; */
+    border-radius: 10px;
+    background-color: var(--cerulean-005);
+}
+#cncode:hover, #cncode:focus{
+    background-color: #ffffff;
+}
+#phone{
+    width: 364px;
+    height: 50px;
+    margin: 5px 0 0;
+    padding: 6px 48px 12px 20px;
+    /* opacity: 0.05; */
+    border-radius: 10px;
+    background-color: var(--cerulean-005);
+}
+#phone:hover, #phone:focus{
+    background-color: #ffffff;
+}
+.message_container{
+    width: 553px;
+    height: 90px;
+    margin: 53px 0 30px;
+    padding: 15px 75px 19px 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px 0 rgba(59, 88, 104, 0.07);
+    background-color: #ffffff;
+
+    font-family: AkkuratPro;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.75;
+  letter-spacing: normal;
+  color: var(--blue-grey);
+}
+.message_container  .message_text .sp_number_text{
+    color: #000000;
+}
+.message_container .message_text .change_link_text{
+    color: var(--cerulean);
+    text-decoration: none;
+}
+.bottom_content_container{
+    display: flex;
+}
+.bottom_content_container .no_of_attempts_left{
+    width: 361px;
+    height: 28px;
+    margin: 18px 5px 34px 26px;
+    opacity: 0.5;
+    font-family: AkkuratPro;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
+    color: var(--blue-grey);
+}
+.bottom_content_container .resend_sms_link{
+    width: 135px;
+    height: 28px;
+    margin: 18px 26px 34px 0px;   
+}
+.bottom_content_container .resend_sms_link a{
+
+    font-family: AkkuratPro;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
+    text-align: center;
+    color: var(--cerulean);
+    text-decoration: none;
+}
+
+.phone_number.phone_number_section_5 input{
+    width: 199px;
+    padding: 20px;
+    /* border: 1px solid black; */
+}
+.phone_number_section.section_5{
+    margin-top: 43px;
+    margin-bottom: 0;
+}
+.phone_number_section.section_5  select{
+    width: 170px;
+    padding:10px 10px 10px 20px;
+    
+    /* border: 1px solid black; */
+}
+.phone_number_section.section_5  select:hover, .phone_number_section.section_5  select:focus{
+    background-color: white;
+}
+.send_code_btn{
+    width: 200px;
+    height: 50px;
+    margin: 35px 0 31px 15px;
+    padding: 14px 0px 16px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px 0 var(--cerulean-30);
+    background-color: var(--cerulean);
+
+    font-family: AkkuratPro;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.57;
+    letter-spacing: 1px;
+    color: #ffffff;
+    border: none;
+    outline: none;
+}
+.send_code_btn:hover{
+    background-color: rgb(0, 131, 187);
+}
+.rectangle_1.section_6{
+    width: 553px;
+    height: 116px;
+    margin: 53px 0 30px;
+    padding: 12px 85px 16px 15px;
+    /* opacity: 0.1; */
+    border-radius: 10px;
+    background-color: rgba(248, 196, 28, 0.1);
+}
+.notification_text.section_6{
+    width: 420px;
+    height: 88px;
+    margin: 0 0 0 15px;
+    font-family: AkkuratPro;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.57;
+    letter-spacing: normal;
+    color: var(--squash);
+}
+.form_inputs.dob{
+    padding-right: 10px;
+}
+/* .form_inputs.section_6{
+    margin-bottom: 20px;
+} */
+.form_inputs.section_6{
+    padding: 0;
+    padding-right: 100px;
+    
+}
+.custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+  .custom-file-input::before {
+    content: 'CHOOSE FILES';
+    display: inline-block;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 159px;
+    height: 50px;
+    margin: 0px 20px 0 0;
+    padding: 15px 30px 16px 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px 0 var(--cerulean-30);
+    background-color: var(--cerulean);
+    font-family: AkkuratPro;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.57;
+    letter-spacing: 1px;
+    color: #ffffff;
+  
+  }
+  .custom-file-input:hover::before {
+    border-color: black;
+  }
+  .custom-file-input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+  }
+
+  .opt_error.error_message{
+      visibility: visible;
+  }

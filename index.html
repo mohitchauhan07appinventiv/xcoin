@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xcoins&trade; Official | Sign Up</title>
+    <!-- ---------------favicon----------------- -->
+    <link rel="icon" href="assets/images/favicon.ico">
+    <!-- -------------External Css File ---- ------- -->
+    <link rel="stylesheet" href="assets/style/style.css">
+    <!-- -----------------Recaptcha Link----------------------- -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+</head>
+
+<body>
+    <!-- --Main Wrapper------>
+    <div class="main_wrapper">
+        <!-- -------------------------1st Page Start ---------------------------- -->
+        <section>
+            <!--------Header Start-------->
+            <header>
+                <!-- Main Header Wrapper with Logo, Navbar, Buttons -->
+                <div class="head_wrapper">
+                    <!-- logo -->
+                    <figure>
+                        <a href="#Home">
+                            <img class="company_logo" src="assets/images/logo.svg" alt="company logo">
+                        </a>
+                    </figure>
+                    <!-- navbar -->
+                    <div class="navbar">
+                        <ul>
+                            <li><a href="#" target="_blank">BUY BITCOIN</a></li>
+                            <li><a href="#" target="_blank">BLOG</a></li>
+                            <li><a href="#" target="_blank">SELL BITCOIN</a></li>
+                            <li><a href="#" target="_blank" id=about_us_link>ABOUT US</a></li>
+                        </ul>
+                    </div>
+                    <!-- right Buttons -->
+                    <div class="login_signup_container">
+                        <!-- change_language selector -->
+                        <div class="change_language_container">
+                            <figure>
+                                <img src="assets/images/usa.svg" alt="usa flag" id='flagImg'>
+                            </figure>
+                            <!-- change language selection tag -->
+                            <select name="change_language" id="change_language" onchange="changeLanguage()">
+                                <option value="english"> ENG </option>
+                                <option value="hindi"> HIN</option>
+                                <option value="russian"> RUS</option>
+                            </select>
+                        </div>
+                        <!-- login Button -->
+                        <div class="login_container">
+                            <button>LOGIN</button>
+                        </div>
+                        <!-- signUp Button -->
+                        <div class="signup_container">
+                            <button><span>SIGN UP</span></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- banner area text -->
+                <div class="create_account">
+                    <h1 class="create_account_text">Create account</h1>
+                </div>
+                <!-- progress circles  -->
+                <div class="oval_rectangle">
+                    <div class="oval active">
+                        <span>1</span>
+                    </div>
+                    <div class="hl"></div>
+                    <div class="oval">
+                        <span>2</span>
+                    </div>
+                    <div class="hl"></div>
+                    <div class="oval">
+                        <span>3</span>
+                    </div>
+                </div>
+            </header>
+            <!--------Header End --------->
+            <!-- progress circle texts - account, personal and verify -->
+            <div class="process_step_container">
+                <h2 class="account_setup_text active">Account setup</h2>
+                <h2 class="personal_details_text">Personal details</h2>
+                <h2 class="verify_id_text">Verify ID</h2>
+            </div>
+            <!-- ---------- Notification Section Start -------------- -->
+            <section>
+                <div class="notification_container">
+                    <div class="rectangle_1">
+                        <figure>
+                            <img class="clock_icon" src="assets/images/clock-icon.svg" alt="clock icon" title="notification">
+                        </figure>
+                        <p class="notification_text">Once submitted, your profile cannot be changed. Please ensure
+                            that your information is correct.</p>
+                    </div>
+                </div>
+            </section>
+            <!-- ---------- Notification Section End -------------- -->
+            <!-- ---------------- Form 1 Section Start ------------------- -->
+            <div class="form_container">
+                <div class="center_container">
+                    <!-- ---------------- First Name Input Section------------------ -->
+                    <label for="firstName" class="form_labels">First name <span class="required">*</span></label>
+                    <input type="text" id='firstName' name="firstName" class="form_inputs" placeholder="First name" autocomplete=off onkeyup="return checkvalid(this,'firstName')" onfocusout="reverseCss(this,'firstName')">
+                    <span id="firstNameError" class="error_message">Invalid Name - Must contain less than 10 charachers</span>
+                    <!-- ---------------- Second Name Input Section------------------ -->
+                    <label for="lastName" class="form_labels">Last name <span class="required">*</span></label><input
+                        type="text" id='lastName' name="lastName" class="form_inputs" placeholder="Last name"
+                        autocomplete=off onkeyup="checkvalid(this,'lastName')" onfocusout="reverseCss(this,'lastName')">
+                    <span id="lastNameError" class="error_message">Invalid Name - Must contain less than 10 charachers</span>
+                    <!-- ---------------- Email Address Input Section------------------ -->
+                    <label for="email" class="form_labels">Email address <span class="required">*</span></label><input
+                        type="email" id='email' name="email" class="form_inputs" placeholder="Email address"
+                        autocomplete=off onkeyup="checkvalid(this,'email')" onfocusout="reverseCss(this,'email')">
+                    <span id="emailError" class="error_message">Invalid email address</span>
+                    <!-- ---------------- Password Input Section------------------ -->
+                    <label for="password" class="form_labels">Create password <span class="required">*</span></label><input
+                        type="password" id='password' name="password" class="form_inputs" placeholder="Create password"
+                        autocomplete=off onkeyup="checkvalid(this,'password')" onfocusout="reverseCss(this,'password')">
+                    <span id="passwordError" class="error_message">Invalid password</span>
+                    <!-- ---------------- Terms and Condition Checkbox Section------------------ -->
+                    <div class="terms">
+                        <label class="main">
+                            <input class="checkbox" id='section_1_terms' type="checkbox">
+                            <span class="geekmark custom_checkbox"></span>
+                        </label>
+                        <p class="terms_text">By clicking «Continue» you agree to our <span class='terms_link'><a
+                                    href="https://www.google.com" target="_blank"> Terms,
+                                    Cookies Policy </a></span> and
+                            <span class="terms_link"><a href="https://www.google.com" target="_blank"> Privacy Policy.
+                                </a></span> You may receive email and SMS notifications
+                            from
+                            us and can opt out at any time.
+                        </p>
+                    </div>
+                    <span id="terms_section1_error" class="error_message">Please accept the terms and conditions</span>
+                    <!-- ---------------- Google recaptcha Section------------------ -->
+                    <div class="recaptha">
+                        <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+                    </div>
+                    <span id="recaptchaError" class="error_message">Verify Human</span>
+    
+                    <!-- ---------------- Submit Buttons ------------------ -->
+                    <button class="submit_btn section_1" onclick="verifyAll()"><span class='btn_text'>CONTINUE</span></button>
+                    <div class="or_text">Or</div>
+                    <a href="https://www.facebook.com" target="_blank"><button class="fb_btn" type="submit"><span class='fb_btn_text'>SIGN UP VIA FACEBOOK</span></button></a>
+                </div>
+            </div>
+            <!-- ---------------- Form 1 Section END ------------------- -->
+        </section>
+        <!-- -------------------------1st Page End  ---------------------------- -->
+
+
+        <!-- -------------------------2nd Page Start ---------------------------- -->  
+        <section>
+            <div class="header_space" id="onBoarding01UDP"></div>
+            <!-- banner area text -->
+            <div class="create_account">
+                <h1 class="create_account_text">Create account</h1>
+            </div>
+            <!-- progress circles  -->
+            <div class="oval_rectangle">
+                <div class="oval active">
+                    <span>1</span>
+                </div>
+                <div class="hl"></div>
+                <div class="oval">
+                    <span>2</span>
+                </div>
+                <div class="hl"></div>
+                <div class="oval">
+                    <span>3</span>
+                </div>
+            </div>
+            <!-- progress circle texts - account, personal and verify -->
+            <div class="process_step_container">
+                <h2 class="account_setup_text active">Account setup</h2>
+                <h2 class="personal_details_text">Personal details</h2>
+                <h2 class="verify_id_text">Verify ID</h2>
+            </div>
+            <!-- ------------ Notification Section Start -------------- -->
+            <div class="notification_container">
+                <div class="rectangle_1">
+                    <figure>
+                        <img class="clock_icon" src="assets/images/clock-icon.svg" alt="clock icon" title="notification">
+                    </figure>
+                    <p class="notification_text">We’ve sent your email address a code. Please input the 4 digit code here, to verify your email address.</p>
+                </div>
+            </div>
+            <!-- ------------- Notification Section End ----------------- -->
+
+            <!-- ---------------- Form 2 Section Start ------------------- -->
+            <div class="form_container">
+                <div class="center_container">
+                    <div class="inner_form_container_otp">
+                        <div class="otp_code_container">
+                            <p class="4_digit_code">4 digit code</p>
+                            <div class="otp_sections">
+                                <input type="number" class="otp_number_input" id="number1" maxlength="1">
+                                <input type="number" class="otp_number_input" id="number2" maxlength="1">
+                                <input type="number" class="otp_number_input" id="number3" maxlength="1">
+                                <input id="lastInput" class="otp_number_input" type="number" maxlength="1">
+                            </div>
+                            <div class="opt_error error_message" id="resendCode-errorMessage"></div>
+                        </div>
+                    </div>
+    
+                    <button id="resend_button" class="submit_btn" onclick="resendCode()" type="submit"><span class='btn_text'>Resend Code</span></button>
+                </div>
+            </div>
+            <!-- ---------------- Form 2 Section End ------------------- -->
+        </section>      
+        <!-- -------------------------2nd Page End ----------------------------- -->  
+
+
+        <!-- -------------------------3rd Page Start ----------------------------- --> 
+        <section>
+            <div class="header_space" id="onBoarding02"></div>
+            <!-- banner area text -->
+            <div class="create_account">
+                <h1 class="create_account_text">Create account</h1>
+            </div>
+            <!-- progress circles  -->
+            <div class="oval_rectangle">
+                <div class="oval">
+                    <span>1</span>
+                </div>
+                <div class="hl"></div>
+                <div class="oval active">
+                    <span>2</span>
+                </div>
+                <div class="hl"></div>
+                <div class="oval">
+                    <span>3</span>
+                </div>
+            </div>
+            <!-- progress circle texts - account, personal and verify -->
+            <div class="process_step_container">
+                <h2 class="account_setup_text ">Account setup</h2>
+                <h2 class="personal_details_text active">Personal details</h2>
+                <h2 class="verify_id_text">Verify ID</h2>
+            </div>
+    
+            <!-- ---------------- Form 3 Section Start ------------------- -->
+            <div class="form_container">
+                <div class="center_container">
+                    <!-- ---------------- Country Name Selection Tab ------------------ -->
+                    <label for="Country" class="form_labels country third_form_labels">Country <span
+                            class="required">*</span></label>
+                    <select name="country" id="country_select" onchange="checkvalid(this,'country_select')"
+                        class="form_inputs"></select>
+                    <span id="countryError" class="error_message">Country not selected</span>
+
+                    <!-- ---------------- First Line Address Input Field ------------------ -->
+                    <label for="fladdress" class="form_labels third_form_labels">First line address <span class="required"> *</span></label>
+                    <input type="text" class="form_inputs" name="fladdress" id="fladdress" placeholder="First Line Address" onkeyup="checkvalid(this,'fladdress')">
+                    <span id="fladdressError" class="error_message">Address length should be less 15</span>
+                    <!-- ---------------- Second Line Address Input Field ------------------ -->
+                    <label for="sladdress" class="form_labels third_form_labels">Second line address<span class="required"> *</span></label>
+                    <input type="text" class="form_inputs" name="sladdress" id="sladdress" placeholder="Second Line Address" onkeyup="checkvalid(this,'sladdress')">
+                    <span id="sladdressError" class="error_message">Address length should be less 15</span>
+                    <!-- ---------------- Two - Input Field Container ------------------ -->
+                    <div class="form_row2">
+                        <!-- ---------------- State Input Field ------------------ -->
+                        <div class="form_col1">
+                            <label for="state" class="form_labels third_form_labels">State/Province <span class="required"> *</span></label>
+                            <input type="text" class="form_inputs" name="state" id="state" placeholder="Enter State" onkeyup="checkvalid(this,'state')">
+                            <span id="stateError" class="error_message">State length should be less than 10</span>
+                        </div>
+                        <!-- ---------------- City Input Field ------------------ -->
+                        <div class="form_col1">
+                            <label for="city" class="form_labels third_form_labels">City/Town <span class="required">*</span></label>
+                            <input type="text" class="form_inputs" name="city" id="city" placeholder="Enter City" onkeyup="checkvalid(this,'city')">
+                            <span id="cityError" class="error_message">City length should be less than 10</span>
+                        </div>
+                    </div>
+                    <!-- ---------------- Zip/Postal Code Input Field ------------------ -->
+                    <label for="zip" class="form_labels third_form_labels">Zip code / Post code <span class="required">*</span></label>
+                    <input type="number" class="form_inputs" name="zip" id="zip" placeholder="Enter Zip Code" onkeyup="checkvalid(this,'zip')">
+                    <span id="zipError" class="error_message">Zip Code must contain 6 digits</span>
+                    <!-- ---------------- Two- Input Field Sections ------------------ -->
+                    <div class="phone_number_section">
+                        <!-- ---------------- Country Code Selection Field ------------------ -->
+                        <div class="country_code">
+                            <label for="countryCode" class="form_labels">Country code <span
+                                    class="required">*</span></label>
+                            <select name="countryCode" class="form_inputs" id="cncode"></select>
+                        </div>
+                        <!-- ---------------- Phone Number Input Field ------------------ -->
+                        <div class="phone_number">
+                            <label for="number" class="form_labels">Phone number <span class="required">*</span></label>
+                            <input type="number" maxlength="10" class="form_inputs" id="phoneNumberInput"
+                                placeholder="Enter Phone Number" onkeyup="checkvalid(this,'phoneNumberInput')">
+                            <span id="phoneNumberInputError" class="error_message">Phone Number Must contain 10 Digits</span>
+                        </div>
+                    </div>
+                    <!-- ---------------- 2nd form submission Button ------------------ -->
+                    <button id="personal_continue_button" class="submit_btn" onclick="verifyAllSection3()" type="submit"><span class='btn_text'>CONTINUE</span></button>
+                </div>
+            </div>
+            <!-- ---------------- Form 3 Section End ------------------- -->
+        </section>
+        <!-- --------------------------3rd Page End ----------------------------- --> 
+
+
+        <!-- -------------------------4th Page Start ----------------------------- --> 
+        <section>
+            <div class="header_space" id="onBoarding03"></div>
+            <!-- banner area text -->
+            <div class="create_account">
+                <h1 class="create_account_text">Create account</h1>
+            </div>
+            <!-- progress circles  -->
+            <div class="oval_rectangle">
+                <div class="oval">
+                    <span>1</span>
+                </div>
+                <div class="hl"></div>
+                <div class="oval active">
+                    <span>2</span>
+                </div>
+                <div class="hl"></div>
+                <div class="oval">
+                    <span>3</span>
+                </div>
+            </div>
+            <!-- progress circle texts - account, personal and verify -->
+            <div class="process_step_container">
+                <h2 class="account_setup_text ">Account setup</h2>
+                <h2 class="personal_details_text active">Personal details</h2>
+                <h2 class="verify_id_text">Verify ID</h2>
+            </div>
+            <!-- ---------------- Form 4 Section Start ------------------- -->
+            <div class="form_container">
+                <div class="center_container">
+                    <div class="message_container">
+                        <p class="message_text">Please enter the seven digit code we just sent to your number
+                            <span class="sp_number_text"> 202-502-5899 </span><span><a href="#onBoarding04"
+                                    class="change_link_text"> Change</a></span></p>
+                    </div>
+                    <!-- ---------------- SMS CODE Input Field ------------------ -->                   
+                    <label for="sms_code" class="form_labels">SMS Code <span class="required">*</span> </label>
+                    <input type="number" class="form_inputs" name="sms_code" id="sms_code_7_digit_1" placeholder="Enter 7 Digit Code" onkeyup="smsCode7DigitValid(this)">
+                    <span id="section4SmsError" class="error_message">Invalid SMS Code</span>
+                    <!-- ---------------- Bottom 3 attempts left section ------------------ -->
+                    <div class="bottom_content_container">
+                        <span><p class="no_of_attempts_left">You have 3 attempts left. Didn't receive the SMS. </p></span>
+                        <span class="resend_sms_link"><a href="#"> Resend SMS Code</a></span>
+                    </div>
+                    <!-- ---------------- Form 4 subission Button ------------------ -->
+                    <button id="verify_phone_button" class="submit_btn" onclick="resendCode('verify','section4SmsError', 'onBoarding05', 'sms_code_7_digit_1')" type="submit"><span class='btn_text'>VERIFY PHONE NUMBER</span></button>
+                </div>
+            </div>
+            <!-- ---------------- Form 4 Section Start ------------------- -->
+
+        </section>
+        <!-- --------------------------4th Page End ----------------------------- --> 
+
+
+        <!-- --------------------------5th Page Start ----------------------------- --> 
+        <section>
+
+            <div class="header_space" id="onBoarding04"></div>
+            <!-- banner area text -->
+            <div class="create_account">
+                <h1 class="create_account_text">Create account</h1>
+            </div>
+            <!-- progress circles  -->
+            <div class="oval_rectangle">
+                <div class="oval">
+                    <span>1</span>
+                </div>
+                <div class="hl"></div>
+                <div class="oval active">
+                    <span>2</span>
+                </div>
+                <div class="hl"></div>
+                <div class="oval">
+                    <span>3</span>
+                </div>
+            </div>
+            <!-- progress circle texts - account, personal and verify -->
+            <div class="process_step_container">
+                <h2 class="account_setup_text ">Account setup</h2>
+                <h2 class="personal_details_text active">Personal details</h2>
+                <h2 class="verify_id_text">Verify ID</h2>
+            </div>
+            <!-- ---------------- Form 5 Section Start ------------------- -->
+            <div class="form_container">
+                <div class="center_container">
+                    <div class="phone_number_section section_5">
+                        <div class="country_code">
+                            <label for="countryCode" class="form_labels">Country code <span
+                                    class="required">*</span></label>
+                            <select name="countryCode" class="form_inputs" id="cncode2"></select>
+                        </div>
+                        <div class="phone_number phone_number_section_5">
+                            <label for="number" class="form_labels">Phone number <span class="required">*</span></label>
+                            <input type="number" maxlength="10" placeholder="Phone Number" class="form_inputs"
+                                id='change_global_number'>
+                        </div>
+                       <button class="send_code_btn"
+                            onclick="changeGlobalNo('sms_code_7_digit_2','change_global_number')">SEND CODE</button>
+                    </div>
+                    <label for="sms_code" class="form_labels">SMS Code <span class="required">*</span> </label>
+                    <input type="number" class="form_inputs" name="sms_code" id="sms_code_7_digit_2"
+                        placeholder="Enter 7 digit code">
+                    <span id="section5SmsError" class="error_message">Invalid SMS Code</span>
+    
+                    <div class="bottom_content_container">
+                        <span>
+                            <p class="no_of_attempts_left">You have 3 attempts left. Didn't receive the SMS. </p>
+                        </span>
+                        <span class="resend_sms_link"><a href="#"> Resend SMS Code</a></span>
+                    </div>
+                    <button id="verify_phone_button_section5" class="submit_btn"
+                        onclick="resendCode('verify','section5SmsError', 'onBoarding05', 'sms_code_7_digit_2')"
+                        type="submit">
+                        <span class='btn_text'>VERIFY PHONE NUMBER</span>
+                    </button>
+                </div>
+            </div>
+            <!-- ---------------- Form 5 Section Start ------------------- -->
+
+        </section>
+        <!-- --------------------------5th Page End ----------------------------- --> 
+
+
+        <!-- ---------------------------6th Page Start ----------------------------- -->
+        <section>
+
+            <div class="header_space" id="onBoarding05"></div>
+            <!-- banner area text -->
+            <div class="create_account">
+                <h1 class="create_account_text">Create account</h1>
+            </div>
+            <!-- progress circles  -->
+            <div class="oval_rectangle">
+                <div class="oval ">
+                    <span>1</span>
+                </div>
+                <div class="hl"></div>
+                <div class="oval">
+                    <span>2</span>
+                </div>
+                <div class="hl"></div>
+                <div class="oval active">
+                    <span>3</span>
+                </div>
+            </div>
+            <!-- progress circle texts - account, personal and verify -->
+            <div class="process_step_container">
+                <h2 class="account_setup_text ">Account setup</h2>
+                <h2 class="personal_details_text">Personal details</h2>
+                <h2 class="verify_id_text active">Verify ID</h2>
+            </div>
+            <!-- ------------- Notification Section -------------- -->
+            <div class="notification_container section_6">
+                <div class="rectangle_1 section_6">
+                    <img class="clock_icon section_6" src="assets/images/attention-icon.svg" alt="clock icon"
+                        title="warning">
+                    <p class="notification_text section_6">Follow instructions to start buying cryptocurrencies via Xcoins:
+                        1) Upload the front and back of your government issued ID <br>
+                        2) Please take a selfie holding your identity document and a note
+                        with today’s date and «Xcoins» written on it</p>
+                </div>
+            </div>
+            <!-- ------------- Notification Section -------------- -->
+            <!-- ---------------- Form 6 Section Start ------------------- -->
+            <div class="form_container">
+                <div class="center_container">
+                    <label for="dob" class="form_labels">Date of birth <span class="required">*</span></label>
+                    <input type="date" class="form_inputs dob" name="dob" id="dob">
+                    <span id="dobError" class="error_message">Invalid Date Of Birth Below 18</span>
+    
+                    <label for="chooseMethod" class="form_labels">Choose method<span class="required"> *</span></label>
+                    <select name="chooseMethod" onchange="changeLabels()" id="chooseMethod" class="form_inputs">
+                        <option value="driving licence">Driving Licence</option>
+                        <option value="voter id">Voter ID</option>
+                        <option value="pan card">Pan Card</option>
+                        <option value="aadhaar card">Aadhaar Card</option>
+                    </select>
+                    <span id="fileTypeError" class="error_message">No method selected</span>
+    
+                    <label for="frontfile" class="form_labels section_6" id="frontPhoto">Driving license front photo<span
+                            class="required"> *</span></label>
+                    <input type="file" class="form_inputs section_6 custom-file-input" name="frontfile" id="frontfile">
+                    <span id="frontPhotoError" class="error_message">Flile Not Uploaded</span>
+    
+                    <label for="backfile" class="form_labels section_6" id='backPhoto'>Driving license back photo<span
+                            class="required"> *</span></label>
+                    <input type="file" class="form_inputs section_6 custom-file-input" name="backfile" id="backfile">
+                    <span id="backPhotoError" class="error_message">File Not Uploaded</span>
+    
+                    <label for="selfiefile" class="form_labels section_6" id="selfieWithId">Selfie holding ID doc and
+                        note<span class="required"> *</span></label>
+                    <input type="file" class="form_inputs section_6 custom-file-input" name="selfiefile" id="selfiefile">
+                    <span id="selfiePhotoError" class="error_message">File Not Uploaded</span>
+    
+                    <label for="authNum" class="form_labels section_6" id='licenceNumber'>Driving licence number<span
+                            class="required"> *</span></label>
+                    <input type="text" class="form_inputs" name="authNum" id="authNum"
+                        placeholder="Enter Driving Licence Number">
+                    <span id="licenceNumberError" class="error_message">Invalid Licence Number</span>
+    
+                    <div class="terms">
+                        <label class="main">
+                            <input class="checkbox" type="checkbox" value="true">
+                            <span class="geekmark custom_checkbox"></span>
+                        </label>
+                        <p class="terms_text">Please accept
+                            <span class='terms_link'>
+                                <a href="https://www.google.com" target="_blank"> Terms of service</a>
+                            </span> and
+                            <span class="terms_link">
+                                <a href="https://www.google.com" target="_blank"> Privacy Policy.</a>
+                            </span>
+                        </p>
+                    </div>
+                    <span id="section6TermsError" class="error_message">Please Accept Terms and Conditions</span>
+    
+                    <button id="section_6_upload_btn" class="submit_btn section_6" type="submit"><span
+                            class='btn_text'>UPLOAD FILES</span></button>
+                </div>
+            </div>
+            <!-- ---------------- Form 6 Section Start ------------------- -->
+
+        </section>
+        <!-- ----------------------------6th Page End ----------------------------- -->
+
+
+        <!-- ------------footer start----------------- -->
+        <footer>
+        <div class="triangle-left">
+            <div class="inner-triangle"></div>
+        </div>
+        <div class="path_2">
+
+        </div>
+        <div class="footer_wrapper">
+            <div class="row_1">
+                <div class="col col_1">
+                    <figure>
+                        <a href="#Home">
+                            <img class="company_logo" src="assets/images/logo.svg" alt="company-logo">
+                        </a>
+                    </figure>
+                    <figure>
+                        <img class="raiting" src="assets/images/review.png" alt="reviews/rating">
+                    </figure>
+                    <p class="reg_address_text">14 East, Level 8, Sliema Road, GZR1639, Malta</p>
+                </div>
+                <div class="col col_2">
+                    <h2 class="heading">COMPANY</h2>
+                    <ul>
+                        <li><a class="links_text" href="#">About us</a></li>
+                        <li><a class="links_text" href="#">Careers</a></li>
+                        <li><a class="links_text" href="#">Press kit</a></li>
+                    </ul>
+                </div>
+                <div class="col col_3">
+                    <h2 class="heading">SUPPORT</h2>
+                    <ul>
+                        <li><a class="links_text" href="#">Help Center</a></li>
+                        <li><a class="links_text" href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col col_4">
+                    <h2 class="heading">SOCIAL</h2>
+                    <ul>
+                        <li><img src="assets/images/facebook.svg" alt="bloc-icon"><a class="links_text"
+                                href="#home">Blog</a></li>
+                        <li><img src="assets/images/twitter.svg" alt="twitter-icon"><a class="links_text"
+                                href="#home">Twitter</a></li>
+                        <li><img src="assets/images/facebook.svg" alt="facebook-icon"><a class="links_text"
+                                href="#home">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row_2">
+                <div class="links">
+                    <a class="links_text" href="#home">&copy;Xcoins.com</a>
+                    <a class="links_text" href="#home">Terms of Service</a>
+                    <a class="links_text" href="#home">Privacy Policy</a>
+                    <a class="links_text" href="#home">Legal notice</a>
+                    <a class="links_text" href="#home">Sitemap</a>
+                </div>
+                <div class="language_select">
+                    <label for="language">Language</label>
+                    <select name="language" id="language">
+                        <option value="english">English</option>
+                        <option value="hindi">Hindi</option>
+                        <option value="russian">Russian</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row_3">
+                <p class="copyright_text">Xcoins is property of CF Technologies Ltd - Company #204616970 4 East,
+                    Level 8, Sliema Road, GZR1639, Malta. All trademarks and copyrights belong to their respective
+                    owners. All rights reserved.</p>
+            </div>
+        </div>
+        </footer>
+        <!-- ------------footer end----------------- -->
+    </div>
+    <!-- --Main Wrapper End------>
+    <script src="./script.js"></script>
+</body>
+</html>
